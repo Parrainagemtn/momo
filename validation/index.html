@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validé</title>
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-yellow: #ffcc00;
+            --primary-blue: #004f9f;
+            --primary-gray: #4e4632;
+            --secondary-yellow: color-mix(in srgb,
+                    var(--primary-yellow) 50%,
+                    transparent);
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--secondary-yellow);
+            position: relative;
+            gap: 80px;
+        }
+
+        .container-img {
+            width: 100px;
+            height: 100px;
+            
+        }
+        img{
+            opacity: 0;
+            animation: rotateCoche .7s ease-out .1s forwards;
+        }
+        h1{
+            font-size: clamp(1rem + 1vh, 3vw + 2rem, 3vw + 1rem);
+            color: var(--primary-blue);
+            translate: 0 3px;
+            opacity: 0;
+            animation: translateElt .5s ease-out .7s forwards;
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            top: 25%;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+        a{
+            position: absolute;
+            bottom: 15%;
+            padding: 18px 18px;
+            border-radius: 100px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            background-color: var(--primary-blue);
+             translate: 0 3px;
+             opacity: 0;
+             animation: translateElt .5s ease-out .7s forwards;
+        }
+        @keyframes rotateCoche {
+            0%{
+                scale: 0;
+                rotate: 0;
+                opacity: 0;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%{
+                scale: 1;
+                rotate: 360deg;
+                opacity: 1;
+            }
+        }
+        @keyframes translateElt{
+            to{
+                translate: 0 0;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+            <div class="container-img">
+        <img src="../icons/coche.svg" alt="icon">
+    </div>
+    <h1>Merci de nous faire confiance</h1>
+    </div>
+    <a href="https://momo-rho-eight.vercel.app/">renseigner un nouveau numéro</a>
+
+</body>
+
+</html>
